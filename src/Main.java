@@ -34,8 +34,8 @@ public class Main {
                         for (int i = 0; i < tarefas.size(); i++){
                             System.out.println((i + 1) + " - " + tarefas.get(i));
                         }
-                        break;
                     }
+                    break;
 
                 case 3:
                     System.out.print("\nDigite o índice da tarefa: ");
@@ -47,7 +47,15 @@ public class Main {
                         System.out.println("Índice inválido!");
                     }
                     break;
+
+                case 0:
+                    System.out.println("Saindo...");
+                    break;
+
+                default:
+                    System.out.println("Opção inválida!");
             }
+
         } while (opcao != 0);
 
         in.close();
