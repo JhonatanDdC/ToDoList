@@ -38,10 +38,14 @@ public class Main {
                     }
 
                 case 3:
-                    System.out.print("Digite o índice da tarefa: ");
+                    System.out.print("\nDigite o índice da tarefa: ");
                     int index = in.nextInt() - 1;
-                    tarefas.remove(index);
-                    System.out.println("Tarefa removida!");
+                    if(index >= 0 && index < tarefas.size()) {
+                        tarefas.remove(index);
+                        System.out.println("Tarefa removida!");
+                    } else {
+                        System.out.println("Índice inválido!");
+                    }
                     break;
             }
         } while (opcao != 0);
