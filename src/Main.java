@@ -25,6 +25,24 @@ public class Main {
                     tarefas.add(tarefa);
                     System.out.println("Tarefa cadastrada!");
                     break;
+
+                case 2:
+                    if (tarefas.isEmpty()){
+                        System.out.println("Nenhuma tarefa cadastrada!");
+                    } else {
+                        System.out.println("\n Suas tarefas:");
+                        for (int i = 0; i < tarefas.size(); i++){
+                            System.out.println((i + 1) + " - " + tarefas.get(i));
+                        }
+                        break;
+                    }
+
+                case 3:
+                    System.out.print("Digite o índice da tarefa: ");
+                    int index = in.nextInt() - 1;
+                    tarefas.remove(index);
+                    System.out.println("Tarefa removida!");
+                    break;
             }
         } while (opcao != 0);
 
